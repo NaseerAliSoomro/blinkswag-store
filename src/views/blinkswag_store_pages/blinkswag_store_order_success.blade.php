@@ -39,7 +39,9 @@
 
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-    <script type="text/javascript" src="{{env('APP_URL')}}/public/assets/js/datatables.js"></script>
+    {{-- naseer --}}
+    <script type="text/javascript" src="{{('/public/assets/js/datatables.js')}}"></script>
+    {{-- <script type="text/javascript" src="{{env('APP_URL')}}/public/assets/js/datatables.js"></script> --}}
 
     <link type="text/css" href="{{env('APP_URL')}}/public/argon/css/argon.css?v=1.0.0" rel="stylesheet">
 

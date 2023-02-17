@@ -151,7 +151,7 @@ $(document).ready(function(){
             $(this).removeClass('dragover');
         });
 
-        window.image_path = "{{url('/')}}"+"/Image/Transparent Images/"+"{{$product_id}}";
+        window.image_path = "{{url('/')}}"+"/Public/Image/Transparent Images/"+"{{$product_id}}";
         function readURL_gallery(input) {
             if (input.files && input.files[0]) {
 

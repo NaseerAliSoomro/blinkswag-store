@@ -21,8 +21,8 @@ use Blinkswag\Store\Models\Blinkswag_Store_Product_List;
 use Blinkswag\Store\Models\Blinkswag_Store_Product_Link_Images;
 use \Stripe\Stripe;
 use Stripe\PaymentIntent;
-
 use Blinkswag\Store\Mail\BlinkswagStoreUserResetPasswordMail;
+
 class BlinkswagStoreController extends Controller
 {
     /**
@@ -216,7 +216,7 @@ class BlinkswagStoreController extends Controller
     }
 
     public function save_printful_product(Request $request){
-        $printful_transparent_images = new Blinkswag_printful_transparent_images();
+        $printful_transparent_images = new Blinkswag_Store_printful_transparent_images();
         $printful_transparent_images['product_id'] = $request->product_id;
         $printful_transparent_images['title'] = $request->title;
         $printful_transparent_images['images_json'] = $request->complete_json;

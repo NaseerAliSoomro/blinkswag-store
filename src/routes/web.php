@@ -44,13 +44,11 @@ Route::get('reset_password/{token}',  [BlinkswagStoreController::class, "reset_p
 Route::post('userstore_resetpassword',[BlinkswagStoreController::class, "userstore_resetpassword"]);
 
 Route::post('uploadimage', [BlinkswagStoreController::class, "uploadimage"])->name("uploadimage");
-Route::post('uploadimage_printful', [StoreController::class, "uploadimage_printful"])->name("uploadimage_printful");
-Route::post('uploadimage_mockup', [StoreController::class, "uploadimage_mockup"])->name("uploadimage_mockup");
-Route::post('getmockupsdesign', [StoreController::class, "getmockupsdesign"])->name("getmockupsdesign");
+Route::post('uploadimage_printful', [BlinkswagStoreController::class, "uploadimage_printful"])->name("uploadimage_printful");
+Route::post('uploadimage_mockup', [BlinkswagStoreController::class, "uploadimage_mockup"])->name("uploadimage_mockup");
+Route::post('getmockupsdesign', [BlinkswagStoreController::class, "getmockupsdesign"])->name("getmockupsdesign");
 
-
-Route::post('save_printful_product', [StoreController::class, "save_printful_product"])->name("save_printful_product");
-
+Route::post('save_printful_product', [BlinkswagStoreController::class, "save_printful_product"])->name("save_printful_product");
 Route::get('view_uploaded_products', [BlinkswagStoreController::class, "view_uploaded_products"])->name('view_uploaded_products');
 });
 

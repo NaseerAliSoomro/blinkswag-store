@@ -523,7 +523,7 @@ if($ismockups)
                                 style="width: 530px; height: 530px; position: relative; background-color: rgb(255, 255, 255);">
                                 <!--img id="tshirtFacing" src="img/crew_front.png"></img-->
                                 <!-- <img id="tshirtFacing" src="img/t-shirts/crew_front.png"></img> -->
-                                <img class="js-qv-product-cover card-img-top front_product_image" src="{{asset('APP_URL')}}/Public/Image/Transparent Images/{{$Product['product']['id']}}/{{$placement['type']}}.png" alt="Card image cap">
+                                <img class="js-qv-product-cover card-img-top front_product_image" src="{{asset('APP_URL')}}/Public/Image/Transparent Images/{{$Product['product']['id']}}/{{$placement['type']}}.png">
                                 {{-- <img class="js-qv-product-cover card-img-top front_product_image" src="{{env('APP_URL')}}/public/Image/Transparent Images/{{$Product['product']['id']}}/{{$placement['type']}}.png" alt="Card image cap"> --}}
                                 <div class="drawingArea"
                                     style="position: absolute;top: {{$inner_canvas_arr[$counter]['y']}}px;left: {{$inner_canvas_arr[$counter]['x']}}px;z-index: 10;width: {{$inner_canvas_arr[$counter]['w']}}px;height: {{$inner_canvas_arr[$counter]['h']}}px;">

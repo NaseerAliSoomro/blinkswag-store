@@ -1075,7 +1075,6 @@ class BlinkswagStoreController extends Controller
         $product_id = $id;
         $printful = new Printful();
         $product_details = $printful->getProductDetailsById($product_id);
-
         return view('blinkswag_store::blinkswag_store_pages.blinkswag_store_productDetails_uploadImages',  [
             'product_details'=>$product_details,
             'product_id'=>$product_id

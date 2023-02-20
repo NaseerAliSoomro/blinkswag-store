@@ -11,8 +11,8 @@
 
     }
 
-    //dd( $product_details );
-    //dd( $product_details['product']['title'] );
+    dd($product_details);
+    // dd( $product_details['product']['title'] );
 @endphp
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style>
@@ -56,6 +56,11 @@
         width: 100%;
     }
 
+    .selected_item > a:hover
+    {
+        background-color: #172b4d;
+    }
+
 </style>
 
 
@@ -73,7 +78,7 @@
                 ?>
                 @foreach($product_details['product']['files'] as $key=>$placement)
                     @if($placement['type']!="mockup" && $placement['type']!="embroidery_chest_left" && $placement['type']!="embroidery_chest_center" )
-                    <li class="nav-item">
+                    <li class="nav-item selected_item">
                         <a class="nav-link {{$isactive}}" id="design_layout_{{$placement['type']}}-tab" data-toggle="tab" href="#design_layout_{{$placement['type']}}" role="tab" aria-selected="true">{{$placement['title']}}</a>
                     </li>
                     <?php
@@ -89,7 +94,7 @@
                 @foreach($product_details['product']['files'] as $key=>$placement)
                     @if( $placement['type']!="mockup" && $placement['type']!="embroidery_chest_left" && $placement['type']!="embroidery_chest_center" )
                         <div class="tab-pane fade show m-3 {{$isactive}}" id="design_layout_{{$placement['type']}}" role="tabpanel" aria-labelledby="design_layout_{{$placement['type']}}-tab">
-                            {{$placement['type']}}
+                            {{-- {{$placement['type']}} --}}
 
                             <div class="dropzone-wrapper gallery_wrapper">
                                 <div class="preview-zone hidden">
@@ -107,7 +112,7 @@
                             </div>
 
                             <div class="shirtDiv_{{$placement['type']}}" class="page"
-                                style="width: 530px; height: 530px; position: relative; background-color: rgb(255, 255, 255);">
+                                style="width: 530px; position: relative; background-color: rgb(255, 255, 255);">
                                 <img class="js-qv-product-cover card-img-top product_image"  alt="Card image cap">
                             </div>
                         </div>
@@ -190,10 +195,13 @@ $(document).ready(function(){
                                     console.log(c);
                                     $("img.product_image:visible").attr("inner_canvas", JSON.stringify(c));
 
-                                    console.log(c.x);
-                                    console.log(c.y);
-                                    console.log(c.w);
-                                    console.log(c.h);
+                                    if($(".jcrop-holder div div .jcrop-tracker").length == $(".mockup_tabs li").length)
+                                    {
+                                        $("a.saveproduct").show();
+                                    }else{
+                                       $("a.saveproduct").hide();
+                                    }
+
                                 }
                             },function(){
                                 $(".jcrop-holder").css("background-color","white");
@@ -213,7 +221,7 @@ $(document).ready(function(){
             var complete_json = {};
             $(".jcrop-holder img.js-qv-product-cover.product_image").each(function(index, value){
                 var src = $(value).attr("src");
-                var inner_canvas = $(value).attr("inner_canvas");
+                var  = $(value).attr("inner_canvas");
                 var arr1 = {};
                 arr1['src'] = src;
                 arr1['inner_canvas'] = inner_canvas;

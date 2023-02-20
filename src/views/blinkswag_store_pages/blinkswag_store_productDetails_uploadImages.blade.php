@@ -11,7 +11,7 @@
 
     }
 
-    dd($product_details);
+    // dd($product_details);
     // dd( $product_details['product']['title'] );
 @endphp
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -59,6 +59,7 @@
     .selected_item > a:hover
     {
         background-color: #172b4d;
+        color: #ecf0f5;
     }
 
 </style>
@@ -78,7 +79,7 @@
                 ?>
                 @foreach($product_details['product']['files'] as $key=>$placement)
                     @if($placement['type']!="mockup" && $placement['type']!="embroidery_chest_left" && $placement['type']!="embroidery_chest_center" )
-                    <li class="nav-item selected_item">
+                    <li class="nav-item selected_item" style="font-wieght: 600">
                         <a class="nav-link {{$isactive}}" id="design_layout_{{$placement['type']}}-tab" data-toggle="tab" href="#design_layout_{{$placement['type']}}" role="tab" aria-selected="true">{{$placement['title']}}</a>
                     </li>
                     <?php
@@ -113,7 +114,7 @@
 
                             <div class="shirtDiv_{{$placement['type']}}" class="page"
                                 style="width: 530px; position: relative; background-color: rgb(255, 255, 255);">
-                                <img class="js-qv-product-cover card-img-top product_image"  alt="Card image cap">
+                                <img class="js-qv-product-cover card-img-top product_image"  alt="">
                             </div>
                         </div>
                         <?php
@@ -127,7 +128,7 @@
 
     <div class="row">
         <div class="col-md-12 text-right">
-            <a class="nav-link btn btn-default saveproduct" style="color: white !important;">Save</a>
+            <a class="nav-link btn btn-default saveproduct w-25" style="color: white !important; margin:auto; display:none">Save</a>
         </div>
     </div>
 

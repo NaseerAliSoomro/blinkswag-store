@@ -12,7 +12,9 @@
     }
 
     @endphp
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {{-- cdn --}}
+<link rel="stylesheet" href="{{ asset('vendor/blinkswag/store/src/public/assets/js/cdn/bootstrap-select.min.css') }}" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
 <style>
    ul.nav.nav-tabs li {
     width: 100%;
@@ -1236,8 +1238,9 @@ $(document).ready(function(){
  @endforeach
 
 
-
- <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+{{-- cdn --}}
+ <script src="{{ asset('vendor/blinkswag/store/src/public/assets/js/cdn/bootstrap-select.min.js') }}"></script>
+ {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script> --}}
 
  <script>
 

@@ -2511,8 +2511,11 @@ if(!empty($complete_settings))
 
 
 @push('js')
-    <script src="https://dashboard.blinkswag.com/public/assets/vendor/chart.js/dist/Chart.min.js"></script>
-    <script src="https://dashboard.blinkswag.com/public/assets/vendor/chart.js/dist/Chart.extension.js"></script>
+<script src="https://dashboard.blinkswag.com/public/assets/vendor/chart.js/dist/Chart.min.js"></script>
+<script src="https://dashboard.blinkswag.com/public/assets/vendor/chart.js/dist/Chart.extension.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/switchery/0.8.2/switchery.min.js" integrity="sha512-lC8vSUSlXWqh7A/F+EUS3l77bdlj+rGMN4NB5XFAHnTR3jQtg4ibZccWpuSSIdPoPUlUxtnGktLyrWcDhG8RvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{{-- cdn --}}
+
+<link rel="stylesheet" href="{{ asset('vendor/blinkswag/store/src/public/assets/js/cdn/switchery.css') }}" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/switchery/0.8.2/switchery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}
 @endpush

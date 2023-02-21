@@ -15,7 +15,9 @@ if($_SERVER['SERVER_NAME']=="localhost")
 @extends('layouts.app')
 
 @section('content')
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{{-- cdn --}}
+<link rel="stylesheet" href="{{ asset ('vendor/blinkswag/store/src/public/assets/js/cdn/bootstrap-select.min.css') }}" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
 <style>
 
 /* Style the tab */
@@ -112,7 +114,7 @@ if($_SERVER['SERVER_NAME']=="localhost")
                     </div>
                     <!-- <i class="ni ni-shop" style="font-size: 100px;"></i> -->
                     {{-- naseer --}}
-                    {{-- <img src="{{('public/assets/img/shirst_logo.svg')}}" style="width: 100px;height: 100px;" alt=""> --}}
+                    {{-- <img src="{{ asset('vendor/blinkswag/store/src/public/assets/img/shirst_logo.svg')}}" style="width: 100px;height: 100px;" alt=""> --}}
                     <img src="{{env('APP_URL')}}/public/assets/img/shirst_logo.svg" style="width: 100px;height: 100px;" alt="">
 
                     <div class="card-body">
@@ -130,7 +132,7 @@ if($_SERVER['SERVER_NAME']=="localhost")
                     </div>
                     <!-- <i class="ni ni-shop" style="font-size: 100px;"></i> -->
                     {{-- naseer --}}
-                    {{-- <img src="{{('public/assets/img/shirst_logo.svg')}}" style="width: 100px;height: 100px;" alt=""> --}}
+                    {{-- <img src="{{asset('vendor/blinkswag/store/src/public/assets/img/shirst_logo.svg')}}" style="width: 100px;height: 100px;" alt=""> --}}
                     <img src="{{env('APP_URL')}}/public/assets/img/shirst_logo.svg" style="width: 100px;height: 100px;" alt="">
 
                     <div class="card-body">
@@ -419,7 +421,14 @@ if($_SERVER['SERVER_NAME']=="localhost")
     }
     document.getElementById("defaultOpen").click();
 </script>
+
+{{-- unwanted --}}
 <script src="https://dashboard.blinkswag.com/public/assets/vendor/chart.js/dist/Chart.min.js"></script>
 <script src="https://dashboard.blinkswag.com/public/assets/vendor/chart.js/dist/Chart.extension.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+
+{{-- cdn --}}
+
+<script src="{{ asset('/vendor/blinkswag/store/src/public/assets/js/cdn/bootstrap-select.min.js') }}"></script>
+{{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script> --}}
+
 @endpush

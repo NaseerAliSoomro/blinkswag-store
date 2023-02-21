@@ -29,7 +29,10 @@ if($ismockups)
 @extends('layouts.app')
 
 @section('content')
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{{-- add cdn --}}
+{{-- cdn --}}
+<link rel="stylesheet" href="{{ asset ('vendor/blinkswag/store/src/public/assets/js/cdn/bootstrap-select.min.css') }}" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
 <style>
 
 /* Style the tab */
@@ -523,7 +526,7 @@ if($ismockups)
                                 style="width: 530px; height: 530px; position: relative; background-color: rgb(255, 255, 255);">
                                 <!--img id="tshirtFacing" src="img/crew_front.png"></img-->
                                 <!-- <img id="tshirtFacing" src="img/t-shirts/crew_front.png"></img> -->
-                                <img class="js-qv-product-cover card-img-top front_product_image" src="{{asset('APP_URL')}}/Public/Image/Transparent Images/{{$Product['product']['id']}}/{{$placement['type']}}.png">
+                                <img class="js-qv-product-cover card-img-top front_product_image" src="{{env('APP_URL')}}/Public/Image/Transparent Images/{{$Product['product']['id']}}/{{$placement['type']}}.png">
                                 {{-- <img class="js-qv-product-cover card-img-top front_product_image" src="{{env('APP_URL')}}/public/Image/Transparent Images/{{$Product['product']['id']}}/{{$placement['type']}}.png" alt="Card image cap"> --}}
                                 <div class="drawingArea"
                                     style="position: absolute;top: {{$inner_canvas_arr[$counter]['y']}}px;left: {{$inner_canvas_arr[$counter]['x']}}px;z-index: 10;width: {{$inner_canvas_arr[$counter]['w']}}px;height: {{$inner_canvas_arr[$counter]['h']}}px;">
@@ -848,21 +851,46 @@ if($ismockups)
 @push('js')
 <script src="https://dashboard.blinkswag.com/public/assets/vendor/chart.js/dist/Chart.min.js"></script>
 <script src="https://dashboard.blinkswag.com/public/assets/vendor/chart.js/dist/Chart.extension.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
 
-    <script type="text/javascript" src="{{env('APP_URL')}}/public/assets/js/tshirt_editor/js/fabric.js"></script>
-    <script type="text/javascript" src="{{env('APP_URL')}}/public/assets/js/tshirt_editor/js/tshirtEditor.js"></script>
+{{-- add cdn --}}
+{{-- cdn --}}
+<script src="{{ asset('/vendor/blinkswag/store/src/public/assets/js/cdn/bootstrap-select.min.js') }}"></script>
+{{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script> --}}
+
+    {{-- Naseer --}}
+    <script type="text/javascript" src="{{asset('/vendor/blinkswag/store/src/public/assets/js/tshirt_editor/js/fabric.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/vendor/blinkswag/store/src/public/assets/js/tshirt_editor/js/tshirtEditor.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/vendor/blinkswag/store/src/public/assets/js/tshirt_editor/js/jquery.miniColors.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/vendor/blinkswag/store/src/public/assets/js/tshirt_editor/js/html5.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/vendor/blinkswag/store/src/public/assets/js/tshirt_editor/js/loading.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/vendor/blinkswag/store/src/public/assets/js/tshirt_editor/js/FileSaver (2).js')}}"></script>
+
+    {{-- <script type="text/javascript" src="{{env('APP_URL')}}/public/assets/js/tshirt_editor/js/fabric.js"></script> --}}
+    {{-- <script type="text/javascript" src="{{env('APP_URL')}}/public/assets/js/tshirt_editor/js/tshirtEditor.js"></script>
     <script type="text/javascript" src="{{env('APP_URL')}}/public/assets/js/tshirt_editor/js/jquery.miniColors.min.js"></script>
     <script type="text/javascript" src="{{env('APP_URL')}}/public/assets/js/tshirt_editor/js/html5.js"></script>
     <script type="text/javascript" src="{{env('APP_URL')}}/public/assets/js/tshirt_editor/js/loading.js"></script>
-    <script type="text/javascript"
-            src="{{env('APP_URL')}}/public/assets/js/tshirt_editor/js/FileSaver (2).js"></script>
+    <script type="text/javascript" src="{{env('APP_URL')}}/public/assets/js/tshirt_editor/js/FileSaver (2).js"></script> --}}
+
+    {{-- Naseer --}}
+    <link type="text/css" rel="stylesheet" href="{{asset('vendor/blinkswag/store/src/public/assets/js/tshirt_editor/css/jquery.miniColors.css')}}/"/>
+    <link href="{{asset ('vendor/blinkswag/store/src/public/assets/js/tshirt_editor/css/loader.css')}}" rel="stylesheet">
+    <link href="{{asset ('vendor/blinkswag/store/src/public/assets/js/tshirt_editor/css/bootstrap-responsive.min.css')}}" rel="stylesheet">
+
+    {{-- add cdn --}}
+    <link href="{{ asset('vendor/blinkswag/store/src/public/assets/js/cdn/font-awesome.min.css') }}" rel="stylesheet">
+    {{-- cdn --}}
+    {{-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> --}}
+
+
     <!-- Le styles -->
-    <link type="text/css" rel="stylesheet" href="{{env('APP_URL')}}/public/assets/js/tshirt_editor/css/jquery.miniColors.css"/>
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="{{env('APP_URL')}}/public/assets/js/tshirt_editor/css/loader.css" rel="stylesheet">
-    <link href="{{env('APP_URL')}}/public/assets/js/tshirt_editor/css/bootstrap-responsive.min.css" rel="stylesheet">
+    {{-- <link type="text/css" rel="stylesheet" href="{{env('APP_URL')}}/public/assets/js/tshirt_editor/css/jquery.miniColors.css"/> --}}
+    {{-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> --}}
+    {{-- <link href="{{env('APP_URL')}}/public/assets/js/tshirt_editor/css/loader.css" rel="stylesheet"> --}}
+    {{-- <link href="{{env('APP_URL')}}/public/assets/js/tshirt_editor/css/bootstrap-responsive.min.css" rel="stylesheet"> --}}
     <script type="text/javascript">
+
+
 $(document).ready(function () {
 
     /*******************************************************************************/
@@ -898,9 +926,9 @@ $(document).ready(function () {
     /*******************************************************************************/
 
 
-    $('#loading-custom-overlay').loading({
-        overlay: $('#custom-overlay')
-    });
+    // $('#loading-custom-overlay').loading({
+    //     overlay: $('#custom-overlay')
+    // });
     $('.loading-blink').hide();
 
     $(document).on("click", ".imgsavejpg", function(event){

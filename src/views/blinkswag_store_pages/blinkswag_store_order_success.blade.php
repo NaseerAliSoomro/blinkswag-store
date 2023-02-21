@@ -32,26 +32,33 @@
     <link rel="stylesheet" href="https://dashboard.blinkswag.com/public/assets/css/alertify.css">
     <link rel="stylesheet" href="https://dashboard.blinkswag.com/public/assets/css/semantic.css">
     {{-- naseer --}}
-    <link rel="stylesheet" type="text/css" href="{{asset('public/assets/css/datatables.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('vendor/blinkswag/store/src/public/assets/css/datatables.css')}}" />
     {{-- <link rel="stylesheet" type="text/css" href="{{env('APP_URL')}}/public/assets/css/datatables.css" /> --}}
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="{{ asset('vendor/blinkswag/store/src/public/assets/js/cdn/sweetalert2@11.js') }}"></script>
+    <script src="{{ asset('vendor/blinkswag/store/src/public/assets/js/cdn/jquery-1.11.3.min.js') }}"></script>
+    {{-- cdn --}}
+    {{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> --}}
 
     {{-- naseer --}}
-    <script type="text/javascript" src="{{('/public/assets/js/datatables.js')}}"></script>
+    <script type="text/javascript" src="{{('/vendor/blinkswag/store/src/public/assets/js/datatables.js')}}"></script>
     {{-- <script type="text/javascript" src="{{env('APP_URL')}}/public/assets/js/datatables.js"></script> --}}
 
-    <link type="text/css" href="{{env('APP_URL')}}/public/argon/css/argon.css?v=1.0.0" rel="stylesheet">
+    {{-- Naseer --}}
+    <link type="text/css" href="{{asset('vendor/blinkswag/store/src/public/argon/css/argon.css?v=1.0.0')}}" rel="stylesheet">
+    {{-- <link type="text/css" href="{{env('APP_URL')}}/public/argon/css/argon.css?v=1.0.0" rel="stylesheet"> --}}
 
     <script src="https://dashboard.blinkswag.com/public/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js">
     </script>
     <script src="https://dashboard.blinkswag.com/public/assets/js/argon.js?v=1.0.0"></script>
     <script src="https://dashboard.blinkswag.com/public/assets/js/alertify.js"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/switchery/0.8.2/switchery.css" integrity="sha512-zKvhCkM8b3JMULax/MlTkNk4gQwMbY8CqpDQC74/n7H6UK3HOZA/mO/fvjhVlh0V/E6PCrp4U6Lw6pnueS9HCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ asset('vendor/blinkswag/store/src/public/assets/js/cdn/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/blinkswag/store/src/public/assets/js/cdnswitchery.css/') }}" referrerpolicy="no-referrer" />
+    {{-- cdn --}}
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/switchery/0.8.2/switchery.css" integrity="sha512-zKvhCkM8b3JMULax/MlTkNk4gQwMbY8CqpDQC74/n7H6UK3HOZA/mO/fvjhVlh0V/E6PCrp4U6Lw6pnueS9HCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
     </head>
 
     <body style="overflow-y:hidden ">

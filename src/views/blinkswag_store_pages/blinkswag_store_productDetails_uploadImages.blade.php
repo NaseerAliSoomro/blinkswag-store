@@ -95,7 +95,7 @@
                 @foreach($product_details['product']['files'] as $key=>$placement)
                     @if( $placement['type']!="mockup" && $placement['type']!="embroidery_chest_left" && $placement['type']!="embroidery_chest_center" )
                         <div class="tab-pane fade show m-3 {{$isactive}}" id="design_layout_{{$placement['type']}}" role="tabpanel" aria-labelledby="design_layout_{{$placement['type']}}-tab">
-                            {{$placement['type']}}
+                            {{-- {{$placement['type']}} --}}
 
                             <div class="dropzone-wrapper gallery_wrapper">
                                 <div class="preview-zone hidden">
@@ -113,8 +113,8 @@
                             </div>
 
                             <div class="shirtDiv_{{$placement['type']}}" class="page"
-                                style="width: 530px; height: 530px; position: relative; background-color: rgb(255, 255, 255);">
-                                <img class="js-qv-product-cover card-img-top product_image"  alt="Card image cap">
+                                style="width: 530px; position: relative; background-color: rgb(255, 255, 255);">
+                                <img class="js-qv-product-cover card-img-top product_image" >
                             </div>
                         </div>
                         <?php

@@ -526,7 +526,7 @@ if($ismockups)
                                 style="width: 530px; height: 530px; position: relative; background-color: rgb(255, 255, 255);">
                                 <!--img id="tshirtFacing" src="img/crew_front.png"></img-->
                                 <!-- <img id="tshirtFacing" src="img/t-shirts/crew_front.png"></img> -->
-                                <img class="js-qv-product-cover card-img-top front_product_image" src="{{env('APP_URL')}}/Public/Image/Transparent Images/{{$Product['product']['id']}}/{{$placement['type']}}.png">
+                                <img class="js-qv-product-cover card-img-top front_product_image" src="{{env('APP_URL')}}/public/Image/Transparent Images/{{$Product['product']['id']}}/{{$placement['type']}}.png">
                                 {{-- <img class="js-qv-product-cover card-img-top front_product_image" src="{{env('APP_URL')}}/public/Image/Transparent Images/{{$Product['product']['id']}}/{{$placement['type']}}.png" alt="Card image cap"> --}}
                                 <div class="drawingArea"
                                     style="position: absolute;top: {{$inner_canvas_arr[$counter]['y']}}px;left: {{$inner_canvas_arr[$counter]['x']}}px;z-index: 10;width: {{$inner_canvas_arr[$counter]['w']}}px;height: {{$inner_canvas_arr[$counter]['h']}}px;">
@@ -610,7 +610,7 @@ if($ismockups)
                                     }
                                     //echo $file."<br>";
                                     echo "<div class='col-md-3 gallery_image_view_con gallery_left ".$class."' style='position:relative;width:100px; height:100px;'>";
-                                    echo "<img style='width: 100%;height: 100%;' class='gallery_image_view img-polaroid tt' src='".url('/').'/Image/'.Auth::user()->id_company.'/mockups/'.$Product_List->id.'/'.$file."' /> <br />";
+                                    echo "<img style='width: 100%;height: 100%;' class='gallery_image_view img-polaroid tt' src='".url('/').'/public/Image/'.Auth::user()->id_company.'/mockups/'.$Product_List->id.'/'.$file."' /> <br />";
                                     echo "</div>";
 
                                     if($file=="front_".$variant_first.".png")
@@ -740,7 +740,7 @@ if($ismockups)
                                                         //echo $file."<br>";
                                                         echo "<div class='col-md-3 gallery_image_view_con' style='position:relative;'>";
                                                         echo '<i class="fa fa-trash delete_galleryimage_icon" aria-hidden="true" filename="'.$file.'"></i>';
-                                                        echo "<img class='gallery_image_view img-polaroid tt' src='".url('/').'/Image/'.Auth::user()->id_company."/".$file."' /> <br />";
+                                                        echo "<img class='gallery_image_view img-polaroid tt' src='".url('/').'/public/Image/'.Auth::user()->id_company."/".$file."' /> <br />";
                                                         echo "</div>";
                                                     }
                                                 }

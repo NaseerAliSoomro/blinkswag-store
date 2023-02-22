@@ -899,7 +899,7 @@
                                                         //echo $file."<br>";
                                                         echo "<div class='col-md-3 gallery_image_view_con' style='position:relative;'>";
                                                         echo '<i class="fa fa-trash delete_galleryimage_icon" aria-hidden="true" filename="'.$file.'"></i>';
-                                                        echo "<img class='gallery_image_view' src='".url('/').'/Image/'.Auth::user()->id_company."/".$file."' /> <br />";
+                                                        echo "<img class='gallery_image_view' src='".url('/').'/public/Image/'.Auth::user()->id_company."/".$file."' /> <br />";
                                                         echo "</div>";
                                                     }
                                                 }

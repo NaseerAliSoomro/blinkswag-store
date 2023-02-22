@@ -35,6 +35,14 @@ Route::get('store/{storename}', [BlinkswagStoreController::class, "viewstore"]);
 Route::post('userstore_signup', [BlinkswagStoreController::class, "userstore_signup"]);
 Route::post('store/checkout_create_php',  [BlinkswagStoreController::class, "checkout_create_php"]);
 
+Route::post('store/checkout_create_php',  [BlinkswagStoreController::class, "checkout_create_php"]);
+
+Route::post('printful/getProductDetails_popup', [BlinkswagStoreController::class, "getProductDetails_popup"])->name("getProductDetails_popup");
+Route::post('printful/getProductDetails_popup_edit', [BlinkswagStoreController::class, "getProductDetails_popup_edit"])->name("getProductDetails_popup_edit");
+Route::post('printful/getProductmockups_popup', [BlinkswagStoreController::class, "getProductmockups_popup"])->name("getProductmockups_popup");
+
+Route::post('getShippingrateTaxrate', [BlinkswagStoreController::class, "getShippingrateTaxrate"])->name("getShippingrateTaxrate");
+
 Route::post('storeuseraddress',[BlinkswagStoreController::class, "storeuseraddress"]);
 Route::get('store_order',  [BlinkswagStoreController::class, "store_order"]);
 Route::post('storeUserLogin',[BlinkswagStoreController::class, "storeUserLogin"]);

@@ -617,7 +617,7 @@ if($ismockups)
                                     {
                                         $flag=1;
                                         ?>
-                                        <img style="position: absolute;right: 0px;top: 0px;width: 80%;" class="js-qv-product-cover card-img-top modal_product_image" src="{{url('/')}}/Image/{{Auth::user()->id_company}}/mockups/{{$Product_List->id}}/{{$file}}" alt="Card image cap">
+                                        <img style="position: absolute;right: 0px;top: 0px;width: 80%;" class="js-qv-product-cover card-img-top modal_product_image" src="{{url('/')}}/public/Image/{{Auth::user()->id_company}}/mockups/{{$Product_List->id}}/{{$file}}" alt="Card image cap">
                                         <?php
                                     }
                                 }

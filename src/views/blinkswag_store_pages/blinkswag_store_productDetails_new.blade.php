@@ -752,7 +752,9 @@ a.dropdown-item.selected {
 }
 </style>
 
-
+@if (Session::has('error'))
+    <div class="alert alert-danger">{{ Session::get('error') }}</div>
+@endif
 <div id="overlay" style="display:none;">
     {{-- naseer --}}
  {{-- <img  src="{{('public/assets/img/blinkswag_loader.gif')}}" alt="" class="spinner1"> --}}

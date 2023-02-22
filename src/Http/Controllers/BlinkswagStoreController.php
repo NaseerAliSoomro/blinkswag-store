@@ -875,15 +875,19 @@ class BlinkswagStoreController extends Controller
             $printful_transparent_images = Blinkswag_Store_printful_transparent_images::where("product_id", $Product_id)->get()->first();
             //dd( $printful_transparent_images );
         }
-
-        return view('blinkswag_store::blinkswag_store_pages.blinkswag_store_edit_product_list',  [
-            'Product_List'=>$Product_List,
-            "stores"=>$stores,
-            "Product_Link_Images"=>$Product_Link_Images,
-            "Product"=>$Product,
-            "ismockups"=>$ismockups,
-            "printful_transparent_images"=>$printful_transparent_images
-		]);
+        if ($printful_transparent_images == null ) {
+            return redirect::back()->with('error', 'Please Upload Product before Mockup Design');
+        }
+        else {
+            return view('blinkswag_store::blinkswag_store_pages.blinkswag_store_edit_product_list',  [
+                'Product_List'=>$Product_List,
+                "stores"=>$stores,
+                "Product_Link_Images"=>$Product_Link_Images,
+                "Product"=>$Product,
+                "ismockups"=>$ismockups,
+                "printful_transparent_images"=>$printful_transparent_images
+            ]);
+        }
     }
 
     /**

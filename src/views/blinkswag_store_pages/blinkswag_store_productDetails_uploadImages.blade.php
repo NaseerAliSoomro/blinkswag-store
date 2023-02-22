@@ -198,7 +198,8 @@
                                         console.log(c);
                                         $("img.product_image:visible").attr("inner_canvas", JSON.stringify(c));
 
-                                        if($(".jcrop-holder div div .jcrop-tracker").length == $(".mockup_tabs li").length)
+                                        // if($(".jcrop-holder div div .jcrop-tracker").length == $(".mockup_tabs li").length)
+                                    if($(".jcrop-holder div div .jcrop-tracker").length == 1)
                                     {
                                         $("a.saveproduct").show();
                                     }else{

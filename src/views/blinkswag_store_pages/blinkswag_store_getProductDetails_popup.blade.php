@@ -34,14 +34,14 @@ $variant_first = $all_selected_variatns[0]['id'];
                                     }
                                     //echo $file."<br>";
                                     echo "<div class='col-md-3 gallery_image_view_con gallery_left ".$class."' style='position:relative;width:100px; height:100px;'>";
-                                    echo "<img style='width: 100%;height: 100%;' class='gallery_image_view img-polaroid tt' src='".url('/').'/Image/'.$id_company.'/mockups/'.$product_list_id.'/'.$file."' /> <br />";
+                                    echo "<img style='width: 100%;height: 100%;' class='gallery_image_view img-polaroid tt' src='".url('/').'/public/Image/'.$id_company.'/mockups/'.$product_list_id.'/'.$file."' /> <br />";
                                     echo "</div>";
 
                                     if($file=="front_".$variant_first.".png")
                                     {
                                         $flag=1;
                                         ?>
-                                        <img style="position: absolute;right: 0px;top: 0px;width: 75%;" class="js-qv-product-cover card-img-top modal_product_image" src="{{url('/')}}/Image/{{$id_company}}/mockups/{{$product_list_id}}/{{$file}}" alt="Card image cap">
+                                        <img style="position: absolute;right: 0px;top: 0px;width: 75%;" class="js-qv-product-cover card-img-top modal_product_image" src="{{url('/')}}/public/Image/{{$id_company}}/mockups/{{$product_list_id}}/{{$file}}" alt="Card image cap">
                                         <?php
                                     }
                                 }

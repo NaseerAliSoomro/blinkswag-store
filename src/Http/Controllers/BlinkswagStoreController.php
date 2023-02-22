@@ -1001,11 +1001,13 @@ class BlinkswagStoreController extends Controller
     {
         $Product_List = Blinkswag_Store_Product_List::find($request->product_list);
         $Product = json_decode($Product_List['product'], true);
+        $Select_Variants = json_decode($Product_List['selected_variants'], true);             
         $Product_id = $Product['product']['id'];
         $Product_Link_Images = Blinkswag_Store_Product_Link_Images::where('product_id',$Product_id)->first();
         $stores = BlinkswagStore::get();
-
-        $variant_first = $Product['variants'][0]['id'];
+        
+        $variant_first = $Select_Variants[0]['id'];
+        // $variant_first = $Product['variants'][0]['id'];  
 
         return view('blinkswag_store::blinkswag_store_pages.blinkswag_store_getmockupsdesign',  [
             'Product_List'=>$Product_List,

@@ -2,6 +2,7 @@
 
 namespace Blinkswag\Store\Http\Controllers;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\InventoryController;
 use Illuminate\Http\Request;
 //
 use App\Services\Books;

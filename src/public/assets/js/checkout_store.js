@@ -61,7 +61,7 @@ console.log( $(".net_amount").attr("val") );
     const { error } = await stripe.confirmPayment({
       elements,
       confirmParams: {
-        return_url: "http://localhost/dashboard/store_order",
+        return_url: "http://localhost/blinkswag-dashboard/store_order",
       },
     }).then(function(result) {
       if (result.error) {

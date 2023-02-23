@@ -1622,10 +1622,10 @@ button:disabled {
 							<label>Country <span class="text-danger">*</span></label>
 							<select id="countryId" class="form-control countries gds-cr" country-data-region-id="gds-cr-one" country-data-default-value="{{$address['country']}}" ></select>
 							<label>State <span class="text-danger">*</span></label>
-							<select name="state" class="states form-control" id="gds-cr-one" region-data-default-value="{{$address['state']}}"></select>
+							<select name="state" class="states form-control" id="gds-cr-one" region-data-default-value="{{$address['state']}}">  </select>
 							<label>City <span class="text-danger">*</span></label>
 							<input type="text" value="{{$address['city']}}" name="city" class="cities form-control" id="cityId">
-							<button class='btn bth-lg-primaty btn-block saveaddress'>
+							<button class='btn bth-lg-primaty btn-block mt-4 w-50 saveaddress' style="margin: auto">
 								<strong>Save</strong>
 							</button>
 
@@ -2496,7 +2496,8 @@ button:disabled {
 
 </body>
 
-<script src="{{('public/assets/js/geodatasource.js')}}"></script>
+<script src="{{ asset('vendor/blinkswag/store/src/public/assets/js/geodatasource.js')}}"></script>
+{{-- <script src="{{('assets/js/geodatasource.js')}}"></script> --}}
 <script>
 
     $(function () {

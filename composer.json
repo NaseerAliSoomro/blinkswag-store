@@ -15,5 +15,8 @@
                 "Blinkswag\\Store\\BlinkswagStoreServiceProvider"
             ]
         }
+    },
+    "require": {
+        "stripe/stripe-php": "^10.7@beta"
     }
 }
